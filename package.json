@@ -1,0 +1,24 @@
+{
+  "description": "Uh, uh, components, um, just components, uh, you know, uh, my components, UI components.",
+  "devDependencies": {
+    "babel": "^6.5.2",
+    "babel-loader": "^6.2.10",
+    "babel-preset-env": "^1.1.4",
+    "css-loader": "^0.26.1",
+    "lerna": "2.0.0-beta.31",
+    "react-styleguidist": "^4.4.1",
+    "style-loader": "^0.13.1",
+    "webpack": "^1.14.0"
+  },
+  "dependencies": {
+    "minimal.css": "^1.0.1",
+    "react": "^15.4.1",
+    "react-dom": "^15.4.1",
+    "react-router": "^3.0.0",
+    "recompose": "^0.21.2"
+  },
+  "scripts": {
+    "styleguide-server": "styleguidist server",
+    "styleguide-build": "styleguidist build"
+  }
+}
