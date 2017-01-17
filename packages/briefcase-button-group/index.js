@@ -1,6 +1,6 @@
 import React from 'react'
-import { TraitsProvider } from 'stranger'
-import rug from 'rug'
+import { TraitsProvider } from 'the-stranger'
+import rug from 'the-rug'
 import 'minimal.css'
 
 const traits = {

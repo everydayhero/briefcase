@@ -1,5 +1,5 @@
 import React from 'react'
-import { comp } from 'stranger'
+import { comp } from 'the-stranger'
 import 'minimal.css'
 import Button from '../briefcase-button'
 
@@ -7,8 +7,10 @@ import Button from '../briefcase-button'
 * A Primary Button
 */
 
-const ButtonPrimaryStyled = comp((props, {
-  color
+const ButtonPrimaryStyled = comp(({
+  traits: {
+    color
+  }
 }) => ({
   backgroundColor: color.primary,
   color: color.lightest
