@@ -1,6 +1,6 @@
 import React, { PropTypes } from 'react'
 import Textarea from 'react-textarea-autosize'
-import { comp } from 'stranger'
+import { comp } from 'the-stranger'
 import 'minimal.css'
 
 /**
@@ -8,27 +8,25 @@ import 'minimal.css'
 */
 
 const createInput = comp(({
-  size,
-  type
-}, {
-  color,
-  ems,
-  font,
-  leading,
-  radius,
-  rems,
-  scale
+  props,
+  traits: {
+    color,
+    font,
+    leading,
+    radius,
+    size
+  }
 }) => ({
   backgroundColor: color.lighter,
   borderColor: color.dark,
   borderRadius: radius(3),
   borderStyle: 'solid',
-  borderWidth: rems(1),
+  borderWidth: size(1),
   fontFamily: font.family.ui,
-  fontSize: size && scale(size),
+  fontSize: props.size && font.scale(props.size),
   fontWeight: font.weight.normal,
-  lineHeight: type === 'textarea' ? leading.prose : leading.ui,
-  padding: `${ems(3)} ${ems(3)}`,
+  lineHeight: props.type === 'textarea' ? leading.prose : leading.ui,
+  padding: `${size(3, 'em')} ${size(3, 'em')}`,
   width: '100%',
   ':focus': {
     backgroundColor: color.lightest,
